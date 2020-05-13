@@ -11,9 +11,9 @@ public class Lab1 {
 		Point3d pointC = new Point3d(coords[6],coords[7],coords[8]);
 		
 		if (pointA.compareValues(pointB) || pointB.compareValues(pointC) || pointC.compareValues(pointA)) {
-			System.out.println("Координаты точек совпадают");
+			System.out.println("РљРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РµРє СЃРѕРІРїР°РґР°СЋС‚");
 		}else {
-			System.out.println("Площадь треугольника = "+computeArea(pointA, pointB, pointC));
+			System.out.println("РџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° = "+computeArea(pointA, pointB, pointC));
 		}
 	}
 	
