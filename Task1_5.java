@@ -5,16 +5,16 @@ public class Task1_5{
 	}
 	public static String operation(double N, double a, double b){
 		if ((a/b == N)||(b/a == N)){
-			return ("Деление");
+			return ("Р”РµР»РµРЅРёРµ");
 		}
 		if (a*b == N){
-			return ("Умножение");
+			return ("РЈРјРЅРѕР¶РµРЅРёРµ");
 		}
 		if (a + b == N){
-			return("Сложение");
+			return("РЎР»РѕР¶РµРЅРёРµ");
 		}
 		if ((a-b == N)||(b-a == N)) {
-			return("Вычитание");
+			return("Р’С‹С‡РёС‚Р°РЅРёРµ");
 		}
 		else {
 			return("None");
