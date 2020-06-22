@@ -1,14 +1,17 @@
 public class Task1{
 	public static void main(String[] args){
-	System.out.println(repeat("mice",5));
+	System.out.println(solutions(1, 0, -1));
 	}
-	public static String repeat(String a, int repeats) {
-		String repeat = "";
-		for (int i = 0; i < a.length(); i++) {
-			for (int j = 0; j < repeats; j++) {
-				repeat += a.charAt(i);
-			}
-		}
-		return repeat;
+	public static int solutions(int a,int b,int c) {
+	double d=Math.pow(b,2)-4*a*c;
+	if (d>0){
+		return 2;
+	}
+	if (d==0){
+		return 1;
+	}
+	else {
+		return 0;
+	}
 	}
 }

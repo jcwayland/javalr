@@ -1,16 +1,18 @@
-import java.util.*;
 public class Task4{
 	public static void main(String[] args){
-		int[] a={3, 3, -2, 408, 3, 3};
-	System.out.println(Arrays.toString(cumulativeSum(a)));
+	System.out.println(flipEndChars("Cat, dog, and mouse."));
 	}
-	public static int[] cumulativeSum(int[] a) {
-		int[] new_mass=new int[a.length];
-		int sum=0;
-		for(int i=0;i<a.length;i++){
-			sum+=a[i];
-			new_mass[i]=sum;
+public static String flipEndChars(String s) {
+		if(s.length()<2){//когда длина строки меньше двух
+			return "Incompatible.";
 		}
-		return (new_mass); 
+		if(s.charAt(0)==s.charAt(s.length()-1)){
+			return "Two's a pair.";
+		}
+		char[] chars = s.toCharArray();//превращаем строку в массив чаров 
+		char a=chars[0];
+		chars[0]=chars[s.length()-1];
+		chars[s.length()-1]=a;
+		return String.valueOf(chars);
 	}
 }

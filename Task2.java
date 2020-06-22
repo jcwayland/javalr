@@ -1,19 +1,11 @@
 public class Task2{
 	public static void main(String[] args){
-		int[] a={10, 4, 1, 4, -10, -50, 32, 21};
-	System.out.println(differenceMaxMin(a));
+	System.out.println(findZip("all zip files are zipped"));
 	}
-	public static int differenceMaxMin(int[] a) {
-		int max=a[1];
-		int min=a[1];
-		for (int i=0;i<a.length;i++){
-			if(a[i]>max){
-				max=a[i];
-			}
-			if(a[i]<min){
-				min=a[i];
-			}
+	public static int findZip(String fz) {
+		if (fz.lastIndexOf("zip") != fz.indexOf("zip")&& fz.indexOf("zip") != -1 ) {
+			return fz.lastIndexOf("zip");
 		}
-		return(max-min);
-		}
+		return 0;
+	}
 }

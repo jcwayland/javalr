@@ -1,16 +1,17 @@
 public class Task3{
 	public static void main(String[] args){
-		int[] a={1, 2, 3, 4};
-	System.out.println(isAvgWhole(a));
+	System.out.println(checkPerfect(6));
 	}
-	public static boolean isAvgWhole(int[] a) {
-		int sum=0;
-		for(int i=0;i<a.length;i++){
-			sum+=a[i];
+public static boolean checkPerfect(int n) {
+		int result = 0;
+		for (int i = 1; i < n; i++) {
+			if (n % i == 0) {
+				result += i;
+			}
+			if (result > n) {
+				return false;
+			}
 		}
-		if(sum%a.length==0){
-			return (true);
-		}
-		return (false);
-		}
+		return (result == n);	
+	}
 }
